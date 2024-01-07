@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 #export PATH = /home/h4mm3r/.local/bin:$PATH
-cat /home/h4mm3r/.cache/wal/sequences
+cat ~/.cache/wal/sequences
 
 alias ll='lsd -l'
 alias ls=lsd
