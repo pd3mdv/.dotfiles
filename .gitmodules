@@ -1,6 +1,7 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:pd3mdv/nvim.git
+  branch = master
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
