@@ -35,6 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 #exec --no-startup-id nextcloud
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpaper/
+bindsym $mod+Shift+b exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpaper/
 exec --no-startup-id picom -b
 
 # Use pactl to adjust volume in PulseAudio.
@@ -55,9 +56,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec kitty tmux new-session -As 0
-bindsym $mod+Return exec kitty tmux
-#bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
