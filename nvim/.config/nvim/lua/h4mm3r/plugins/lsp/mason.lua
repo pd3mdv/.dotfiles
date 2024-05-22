@@ -33,6 +33,7 @@ return {
         "tailwindcss",
         "svelte",
         "lua_ls",
+        "golangci_lint_ls",
         "graphql",
         "emmet_ls",
         "prismals",
@@ -52,6 +53,7 @@ return {
         "pylint", -- python linter
         "eslint_d", -- js linter
         "bslint",
+        "golangci-lint",
         "shellcheck",
         "yamllint",
       },
