@@ -23,8 +23,8 @@ set $red                 #aa5566
 set $green               #779988
 
 # theme colors
-set $bg-color 	         #334455
-set $inactive-bg-color   #212121
+set $bg-color 	         #212121
+set $inactive-bg-color   #101010
 set $text-color          #5aecd3
 set $inactive-text-color #557788
 set $urgent-bg-color     #ee3355
@@ -234,7 +234,7 @@ bar {
 
 	      colors {
 		            # whole color settings
-		            background   $black
+		            background   $bg-color
 		            statusline   $white
 		            separator    $grey
 
