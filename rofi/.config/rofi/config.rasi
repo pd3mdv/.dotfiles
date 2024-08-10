@@ -142,3 +142,4 @@ element-text, element-icon {
     text-color: inherit;
 }
 
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
