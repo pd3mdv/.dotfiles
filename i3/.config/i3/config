@@ -67,6 +67,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpaper/
 bindsym $mod+Shift+b exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpaper/
 exec --no-startup-id picom -b
+exec --no-startup-id flameshot
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
