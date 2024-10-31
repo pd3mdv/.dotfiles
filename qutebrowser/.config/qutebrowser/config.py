@@ -130,10 +130,9 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///home/h
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/h4mm3r/.local/share/qutebrowser/userscripts/*')
 
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'gh': 'https://github.com/search?q={}&type=repositories', 'gi': 'https://giphy.com/search/{}', 'go': 'https://www.google.com/search?q={}', 'wi': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}'}
 
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'go': 'https://www.google.com/search?q={}', 'wi': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 'gh': 'https://github.com/search?q={}&type=repositories'}
-
-config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('t', 'cmd-set-text -s :open -t')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
