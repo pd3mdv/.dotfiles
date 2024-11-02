@@ -130,7 +130,7 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///home/h
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/h4mm3r/.local/share/qutebrowser/userscripts/*')
 
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'gh': 'https://github.com/search?q={}&type=repositories', 'gi': 'https://giphy.com/search/{}', 'go': 'https://www.google.com/search?q={}', 'wi': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'gh': 'https://github.com/search?q={}&type=repositories', 'gi': 'https://giphy.com/search/{}', 'go': 'https://www.google.com/search?q={}', 'osm': 'https://openstreetmap.org/search?query={}', 'wi': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}'}
 
 config.bind('t', 'cmd-set-text -s :open -t')
 config.bind('xb', 'config-cycle statusbar.show always never')
@@ -144,11 +144,8 @@ config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/
 config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
 config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
 
-c.colors.webpage.prefers_color_scheme_dark = True
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
 c.colors.webpage.darkmode.contrast = -.022
-c.colors.webpage.darkmode.threshold.text = 150
 c.colors.webpage.darkmode.threshold.background = 100
 c.colors.webpage.darkmode.policy.images = 'always'
-c.colors.webpage.darkmode.grayscale.images = 0.35
