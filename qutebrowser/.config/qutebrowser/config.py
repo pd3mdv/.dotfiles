@@ -143,3 +143,12 @@ config.bind(',dr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/
 config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
 config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
 config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+
+c.colors.webpage.prefers_color_scheme_dark = True
+c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
+c.colors.webpage.darkmode.contrast = -.022
+c.colors.webpage.darkmode.threshold.text = 150
+c.colors.webpage.darkmode.threshold.background = 100
+c.colors.webpage.darkmode.policy.images = 'always'
+c.colors.webpage.darkmode.grayscale.images = 0.35
