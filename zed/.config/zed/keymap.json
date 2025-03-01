@@ -21,10 +21,10 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "ctrl-d": "ctrl-dzz",
-      "ctrl-u": "ctrl-uzz",
-      "n": "nzzzv",
-      "N": "Nzzzv"
+      "ctrl-d": ["ctrl-d", "z", "z"],
+      "ctrl-u": ["ctrl-u", "z", "z"],
+      "n": ["n", "z", "z", "z", "v"],
+      "N": ["N", "z", "z", "z", "v"]
     }
   },
   {

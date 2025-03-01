@@ -14,14 +14,17 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term ghostty
+#set $term foot
+set $term kitty
 # Your preferred application launcher
-set $menu wmenu-run
+#set $menu wmenu-run
+set $menu wofi --show drun --style ~/.config/wofi/style.css
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/Wallpaper/wallhaven-73qdke.jpg fill
 #
 # Example configuration:
 #
@@ -29,6 +32,32 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+# set color variables
+# optional theme colorscheme
+set $grey                #334455
+set $magenta             #ddbbcc
+set $blue                #557788
+set $cyan                #22ddcc
+set $black               #334455
+set $white               #aacccc
+set $yellow              #dd9933
+set $red                 #aa5566
+set $green               #779988
+
+# theme colors
+set $bg-color 	         #212121
+set $inactive-bg-color   #101010
+set $text-color          #5aecd3
+set $inactive-text-color #557788
+set $urgent-bg-color     #ee3355
+
+# set window colors
+# class                 border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $bg-color
+client.background       $bg-color
 ### Idle configuration
 #
 # Example configuration:
@@ -41,6 +70,13 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+#Authentication dialog
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 ### Input configuration
 #
@@ -67,7 +103,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -119,6 +155,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+    bindsym $mod+bracketleft workspace prev
+    bindsym $mod+bracketright workspace next
+    bindsym $mod+Tab workspace back_and_forth
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -153,7 +192,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    #bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -216,12 +255,20 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        # whole color settings
+        background   $bg-color
+        statusline   $white
+        separator    $grey
+
+        # type             border             backgr.            font
+        focused_workspace  $grey              $white             $black
+        active_workspace   $grey              $white             $black
+        inactive_workspace $grey              $black             $white
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $black
     }
 }
 
