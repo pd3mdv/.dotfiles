@@ -1,12 +1,12 @@
 * {
     font-family: DejaVu Sans Mono; 
-    /*font-size: 20px;*/
+    /*font-size: 10px;*/
     border: none;
 }
 
 window {
     margin: 0px;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 18px;
     border: 2px solid rgba(255,136,0,0.8);
     background-color: rgba(0,0,0,0.8);
@@ -18,7 +18,7 @@ window {
     border: 2px solid rgba(255,96,255,1); 
     background-color: rgba(0,0,0,0.1);
     /*background-color: rgba(255,96,255,0.5); */
-    font-size: 28px;
+    font-size: 18px;
     font-weight: normal;
     color: rgb(255,255,96);
 }
@@ -80,7 +80,7 @@ window {
 #text:selected {
     margin: 5px;
     color: rgba(128,255,128,1);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     /*border: 3px solid yellow;*/
     /*background-color: blue;*/
