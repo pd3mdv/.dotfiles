@@ -4,3 +4,6 @@ qutebrowser/.config/qutebrowser/bookmarks/urls
 qutebrowser/.config/qutebrowser/bookmarks/urls
 qutebrowser/.config/qutebrowser/qsettings/QtProject.conf
 tmux/.local/bin/kubectl
+dwm-6.5/dwm
+dwm-6.5/dwm.o
+dwm-6.5/util.o
