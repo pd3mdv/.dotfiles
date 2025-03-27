@@ -9,17 +9,12 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *light_up[] = {"/usr/bin/light", "-A", "5", NULL};
-static const char *light_down[] = {"/usr/bin/light", "-U", "5", NULL};
+static const char *light_up[] = {"/sbin/brightnessctl", "-d", "intel_backlight", "s", "5%+", NULL};
+static const char *light_down[] = {"/sbin/brightnessctl", "-d", "intel_backlight", "s", "5%-", NULL};
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-//static const char gray1[]       = "#222222";
-//static const char gray2[]       = "#444444";
-//static const char gray3[]       = "#bbbbbb";
-//static const char gray4[]       = "#eeeeee";
-//static const char col_cyan[]        = "#005577";
 
 // theme
 #include "themes/tokyonight.h"
