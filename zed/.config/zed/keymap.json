@@ -21,10 +21,9 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "ctrl-d": ["ctrl-d", "z", "z"],
-      "ctrl-u": ["ctrl-u", "z", "z"],
-      "n": ["n", "z", "z", "z", "v"],
-      "N": ["N", "z", "z", "z", "v"]
+      "ctrl-d": ["editor::PageDown", "editor::ScrollCursorCenter"],
+      "ctrl-u": ["editor::PageUp", "editor::ScrollCursorCenter"],
+      "gd": "editor::GoToDefinition"
     }
   },
   {
