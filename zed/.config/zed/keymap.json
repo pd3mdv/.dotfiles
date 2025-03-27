@@ -21,8 +21,8 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "ctrl-d": ["editor::PageDown", "editor::ScrollCursorCenter"],
-      "ctrl-u": ["editor::PageUp", "editor::ScrollCursorCenter"],
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
       "gd": "editor::GoToDefinition"
     }
   },
