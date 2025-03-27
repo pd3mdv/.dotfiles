@@ -17,7 +17,7 @@ static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 
 // theme
-#include "themes/tokyonight.h"
+#include "themes/gruvbox.h"
 
 
 static const char *colors[][3]      = {
@@ -40,6 +40,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
+  "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
   "feh", "--bg-fill", "/home/h4mm3r/Pictures/Wallpaper/wallhaven-73qdke.jpg", NULL,
   "dwmblocks", NULL,
   "picom", NULL,
@@ -92,13 +93,13 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const Key keys[] = {
   /* modifier                     key        function        argument */
 
-  // brightness and audio 
+  // brightness and audio
   {0,       XF86XK_AudioLowerVolume,         spawn,          {.v = downvol}},
 	{0,       XF86XK_AudioMute,                spawn,          {.v = mutevol }},
 	{0,       XF86XK_AudioRaiseVolume,         spawn,          {.v = upvol}},
 	{0,				XF86XK_MonBrightnessUp,          spawn,          {.v = light_up}},
 	{0,				XF86XK_MonBrightnessDown,        spawn,        	 {.v = light_down}},
-	
+
   { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = droficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
@@ -146,4 +147,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
