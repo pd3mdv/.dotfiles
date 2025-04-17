@@ -17,34 +17,16 @@ static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 
 // theme
-#include "themes/gruvbox.h"
-
-
-static const char *colors[][3]      = {
-	/*                    fg         bg         border   */
-	[SchemeNorm]       = { gray3,   white,  gray2 },
-  [SchemeSel]        = { gray4,   blue,   blue  },
-//  [SchemeTitle]      = { white,   black,  black }, // active window title
-//  [TabSel]           = { blue,    gray2,  black },
-//  [TabNorm]          = { gray3,   black,  black },
-//  [SchemeTag]        = { gray3,   black,  black },
-//  [SchemeTag1]       = { blue,    black,  black },
-//  [SchemeTag2]       = { red,     black,  black },
-//  [SchemeTag3]       = { orange,  black,  black },
-//  [SchemeTag4]       = { green,   black,  black },
-//  [SchemeTag5]       = { pink,    black,  black },
-//  [SchemeLayout]     = { green,   black,  black },
-//  [SchemeBtnPrev]    = { green,   black,  black },
-//  [SchemeBtnNext]    = { yellow,  black,  black },
-//  [SchemeBtnClose]   = { red,     black,  black },
-};
+#include "/home/h4mm3r/.cache/wal/colors-wal-dwm.h"
 
 static const char *const autostart[] = {
   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
-  "feh", "--bg-fill", "/home/h4mm3r/Pictures/Wallpaper/wallhaven-73qdke.jpg", NULL,
+//  "feh", "--bg-fill", "/home/h4mm3r/Pictures/Wallpaper/wallhaven-73qdke.jpg", NULL,
+  "feh", "--bg-fill", "/home/h4mm3r/Pictures/Wallpaper/wp1924087-rembrandt-wallpapers.jpg", NULL,
   "dwmblocks", NULL,
   "picom", NULL,
   "dunst", NULL,
+  "redshift", "-O", "4500", NULL,
 	NULL /* terminate */
 };
 
@@ -86,7 +68,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", white, "-nf", gray3, "-sb", blue, "-sf", gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *droficmd[] = { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 

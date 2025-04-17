@@ -8,7 +8,8 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "relative_line_numbers": true
+    "relative_line_numbers": true,
+    "edit_prediction_provider": "copilot"
   },
   "base_keymap": "VSCode",
   "vim_mode": true,

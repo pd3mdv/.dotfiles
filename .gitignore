@@ -9,3 +9,4 @@ dwm-6.5/dwm.o
 dwm-6.5/util.o
 dwm-6.5/drw.o
 dwmblocks/dwmblocks
+qutebrowser/.config/qutebrowser/autoconfig.yml
