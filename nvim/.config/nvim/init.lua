@@ -74,6 +74,13 @@ vim.opt.cursorcolumn = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+--folding options
+--see `:help foldmethod`
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
@@ -841,6 +848,7 @@ require("lazy").setup({
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			-- vim.cmd.colorscheme("tokyonight-night")
 			vim.cmd.colorscheme("retrobox")
+			vim.opt.colorcolumn = "80" -- Set the color column to 80 characters
 		end,
 	},
 
