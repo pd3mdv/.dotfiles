@@ -1,0 +1,26 @@
+window {
+  border-radius: 0;
+  opacity: 0.97;
+  border: 2px solid #D9CCB3;
+
+  background-color: #212121;
+}
+
+label {
+  font-family: 'CaskaydiaMono Nerd Font', monospace;
+  font-size: 11pt;
+
+  color: #D9CCB3;
+}
+
+image {
+  color: #D9CCB3;
+}
+
+progressbar {
+  border-radius: 0;
+}
+
+progress {
+  background-color: #D9CCB3;
+}
