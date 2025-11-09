@@ -106,3 +106,6 @@ fi
 alias ls="lsd"
 alias ll="lsd -l"
 alias cat="bat"
+alias grep="rg"
+alias vi="nvim"
+alias v="nvim"
