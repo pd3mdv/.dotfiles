@@ -9,6 +9,7 @@ vim.g.have_nerd_font = true
 
 -- netrw banner disable
 vim.g.netrw_banner = 0
+vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
