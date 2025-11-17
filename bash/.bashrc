@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [[ -f ~/.cache/wal/sequences ]]; then
+  cat ~/.cache/wal/sequences
+fi
+
 #export PATH = /home/h4mm3r/.local/bin:$PATH
 if [[ -d /home/linuxbrew ]]; then
   export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
