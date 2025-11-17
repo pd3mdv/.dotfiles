@@ -6,12 +6,32 @@
 [[ $- != *i* ]] && return
 
 #export PATH = /home/h4mm3r/.local/bin:$PATH
-cat ~/.cache/wal/sequences
+if [[ -d /home/linuxbrew ]]; then
+  export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+fi
+export PATH=/var/lib/flatpak/exports/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
-alias ll='lsd -l'
-alias ls=lsd
-alias grep='grep --color=auto'
-alias cat=bat
-alias rss='russ --database-path ~/Nextcloud/feeds.db'
+if [[ -x lsd ]]; then
+  alias ls="lsd"
+  alias ll="lsd -l"
+fi
+if [[ -x bat ]]; then
+  alias cat="bat"
+fi
+if [[ -x nvim ]]; then
+  alias vi="nvim"
+  alias v="nvim"
+fi
+
+alias ..="cd .."
+alias ...='../..'
+alias ....="cd ../.."
+alias .....='../../..'
+alias ......="cd ../../.."
+alias .......='../../../..'
+alias ........="cd ../../../.."
+alias .........='../../../../..'
+alias ...........='../../../../../..'
 
 PS1='[\u@\h \W]\$ '
