@@ -30,24 +30,19 @@ if [[ -d $HOME/.oh-my-zsh ]]; then
   # export ARCHFLAGS="-arch x86_64"
   
 fi
-if [[ -x lsd ]]; then
+if [ -x "$(command -v lsd)" ]; then
   alias ls="lsd"
   alias ll="lsd -l"
 fi
-if [[ -x bat ]]; then
+if [ -x "$(command -v bat)" ]; then
   alias cat="bat"
 fi
-if [[ -x nvim ]]; then
+if [ -x "$(command -v nvim)" ]; then
   alias vi="nvim"
   alias v="nvim"
+else
+  alias v="vim"
 fi
 
-alias ..="cd .."
 alias ...='../..'
-alias ....="cd ../.."
-alias .....='../../..'
-alias ......="cd ../../.."
-alias .......='../../../..'
-alias ........="cd ../../../.."
-alias .........='../../../../..'
-alias ...........='../../../../../..'
+alias ....='../../..'
