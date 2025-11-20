@@ -1,6 +1,4 @@
 #!/bin/env bash
-# TODO: remove all
+distrobox-rm -af
 
-# TODO: list distros
-
-# TODO: create for each with -ap packages
+distrobox-create -n ubuntu -i ubuntu:24.04 -ap "ubuntu-gnome-desktop gnome-session gdm3 firefox nautilus gnome-terminal gedit"

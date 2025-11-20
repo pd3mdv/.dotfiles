@@ -1,0 +1,13 @@
+[Unit]
+Description=tor-pihole
+
+[Service]
+Type=simple
+WorkingDirectory=/home/h4mm3r/Github/docker-torproxy/
+ExecStart=/usr/sbin/podman-compose up
+ExecStop=/usr/sbin/podman-compose down
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=default.target
