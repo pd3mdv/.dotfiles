@@ -9,7 +9,7 @@ if [[ $url == *github.com* ]]; then
         url="${url/:/\/}" 
         url="https://$url"
     fi
-    if [ -x "$(command -v open)" ]; then
+    if [[ -x "$(command -v open)" ]]; then
 	open "$url"
     else
 	qutebrowser "$url"
