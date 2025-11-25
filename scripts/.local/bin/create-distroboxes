@@ -1,4 +1,5 @@
 #!/bin/env bash
-distrobox-rm -af
+distrobox-rm -a -f
 
-distrobox-create -n ubuntu -i ubuntu:24.04 -ap "ubuntu-gnome-desktop gnome-session gdm3 firefox nautilus gnome-terminal gedit"
+#distrobox-create -n ubuntu -i ubuntu:24.04 -ap "ubuntu-gnome-desktop gnome-session gdm3 firefox nautilus gnome-terminal gedit"
+distrobox-create -n ubuntu -i ubuntu:24.04 -ap "firefox"

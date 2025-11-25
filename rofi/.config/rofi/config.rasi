@@ -5,7 +5,7 @@ configuration {
     combi-modi: "window,drun";
     icon-theme: "Oranchelo";
     show-icons: true;
-    terminal: "kitty";
+    terminal: "ghostty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;

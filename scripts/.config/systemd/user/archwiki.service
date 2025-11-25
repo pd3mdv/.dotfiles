@@ -1,0 +1,10 @@
+[Unit]
+Description="local arch wiki"
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/kiwix/
+ExecStart=kiwix-serve -i ipv4 -p 9080 /opt/kiwix/archlinux_en_all_maxi_2025-09.zim
+
+[Install]
+WantedBy=default.target
