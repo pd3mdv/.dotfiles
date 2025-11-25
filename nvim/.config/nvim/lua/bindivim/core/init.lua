@@ -67,5 +67,5 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.cmd.colorscheme("retrobox")
+
 vim.opt.colorcolumn = "80" -- Set the color column to 80 characters
