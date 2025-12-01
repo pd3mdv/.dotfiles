@@ -3,4 +3,5 @@ return {
 	"christoomey/vim-tmux-navigator", -- tmux & split window navigation
 	"github/copilot.vim",
 	"vimpostor/vim-tpipeline",
+	"iyaowong/transparent",
 }
