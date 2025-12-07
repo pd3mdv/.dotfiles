@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 vim.g.netrw_banner = 0
 vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 
@@ -36,6 +35,7 @@ vim.opt.inccommand = "split"
 
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
+vim.opt.colorcolumn = "80" -- Set the color column to 80 characters
 
 vim.opt.scrolloff = 10
 
@@ -68,4 +68,3 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.opt.colorcolumn = "80" -- Set the color column to 80 characters
