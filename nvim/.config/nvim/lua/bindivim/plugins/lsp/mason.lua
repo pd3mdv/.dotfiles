@@ -14,7 +14,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"eslint",
-				"cpplint",
+				"clangd",
 			},
 		},
 		dependencies = {
@@ -40,7 +40,6 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"eslint_d",
-				"cpptools",
 			},
 		},
 		dependencies = {
