@@ -1,12 +1,51 @@
 * {
-  background-color: #212121;
-  color: #d9ccb3;
+    border:        none;
+    border-radius: 0;
+    font-family:   "Source Sans Pro", "FontAwesome 6 Free";
+    font-size: 15px;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+    min-height: 0;
+}
 
-  border: none;
-  border-radius: 0;
-  min-height: 0;
-  font-family: CaskaydiaMono Nerd Font Propo;
-  font-size: 12px;
+window#waybar {
+    color: rgba(53, 185, 171, 1);
+    background-color: rgba(23, 63, 79, 0.4);
+    border-bottom: 2px solid rgba(53, 185, 171, 0.4);
+}
+
+window#waybar.solo {
+    color: rgba(53, 185, 171, 1);
+}
+
+#workspaces {
+    margin-right: 5px;
+}
+
+#custom-scratchpad {
+    margin-right: 5px;
+    padding: 0px 5px;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0 5px;
+    color: rgba(53, 185, 171, 1);
+    margin: 0 1.5px;
+    min-width: 9px;
+}
+
+#workspaces button.focused {
+    color: rgba(115, 186, 37, 1);
+}
+
+#workspaces button.visible {
+    color: rgba(115, 186, 37, 1);
+}
+
+#workspaces button.urgent {
+    color: rgba(33, 164, 223, 1);
 }
 
 .modules-left {
@@ -17,20 +56,50 @@
   margin-right: 8px;
 }
 
-#workspaces button {
-  all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
+#tray,
+#mode, 
+#battery, 
+#cpu, 
+#memory, 
+#network, 
+#bluetooth,
+#pulseaudio, 
+#idle_inhibitor, 
+#temperature,
+#custom-layout,
+#backlight {
+    margin: 0px 6px 0px 10px;
+/*    min-width: 30px;*/
 }
 
-#tray,
-#cpu,
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#clock,
+#clock {
+    margin: 0px 6px 0px 10px;
+}
+
+#battery.warning {
+   color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
+}
+
+#bluetooth.disabled {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.off {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.connected {
+    color: rgba(115, 186, 37, 1);
+}
+
 #custom-power-menu {
   min-width: 12px;
   margin: 0 7.5px;
