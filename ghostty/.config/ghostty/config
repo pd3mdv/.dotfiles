@@ -947,7 +947,7 @@ x11-instance-name =
 #   * `home` - The home directory of the executing user.
 # 
 #   * `inherit` - The working directory of the launching process.
-working-directory = 
+working-directory = home
 
 # Key bindings. The format is `trigger=action`. Duplicate triggers will
 # overwrite previously set values. The list of actions is available in
@@ -1261,7 +1261,7 @@ window-inherit-font-size = true
 # 
 # macOS: To hide the titlebar without removing the native window borders
 #        or rounded corners, use `macos-titlebar-style = hidden` instead.
-window-decoration = true
+window-decoration = server
 
 # The font that will be used for the application's window and tab titles.
 # 
@@ -2051,7 +2051,7 @@ gtk-single-instance = desktop
 # 
 # Changing this value at runtime and reloading the configuration will only
 # affect new windows.
-gtk-titlebar = false
+gtk-titlebar = true
 
 # Determines the side of the screen that the GTK tab bar will stick to.
 # Top, bottom, left, right, and hidden are supported. The default is top.

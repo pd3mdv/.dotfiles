@@ -6,8 +6,10 @@
 if [[ -d /home/linuxbrew ]]; then
   export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 fi
-export PATH=/var/lib/flatpak/exports/bin:$PATH
-export PATH=~/.local/bin:$PATH
+if [[ -d /var/lib/flatpak ]]; then
+  export PATH=/var/lib/flatpak/exports/bin:$PATH
+  export PATH=~/.local/bin:$PATH
+fi
 
 if [[ -d $HOME/.oh-my-zsh ]]; then 
   # Path to your oh-my-zsh installation.
@@ -48,6 +50,8 @@ alias ...='../..'
 alias ....='../../..'
 alias ssht='ssh 192.168.1.12'
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [[ -d $HOME/.config/nvm ]]; then	
+  export NVM_DIR="$HOME/.config/nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
