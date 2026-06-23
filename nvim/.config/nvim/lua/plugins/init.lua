@@ -27,7 +27,7 @@ pack.add({
   { src = "https://github.com/hrsh7th/cmp-nvim-lsp.git",                     name = "cmp-nvim-lsp" },
   { src = "https://github.com/hrsh7th/cmp-buffer.git",                       name = "cmp-buffer" },
   { src = "https://github.com/hrsh7th/cmp-path.git",                         name = "cmp-path" },
-  { src = "https://github.com/L3MON4D3/LuaSnip.git",                         name = "LuaSnip" },
+  { src = "https://github.com/L3MON4D3/LuaSnip.git",                         name = "Luasnip" },
   { src = "https://github.com/saadparwaiz1/cmp_luasnip.git",                 name = "cmp_luasnip" },
   { src = "https://github.com/rafamadriz/friendly-snippets.git",             name = "friendly-snippets" },
   { src = "https://github.com/onsails/lspkind-nvim.git",                     name = "lspkind" },
