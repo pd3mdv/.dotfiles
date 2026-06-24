@@ -20,4 +20,6 @@ configuration {
     font: "Jetbrains Mono 8";
 }
 
-@theme "/home/h4mm3r/.cache/wal/colors-rofi-light.rasi"
+//@theme "/home/h4mm3r/.cache/wal/colors-rofi-light.rasi"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

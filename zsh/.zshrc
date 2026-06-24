@@ -11,6 +11,10 @@ if [[ -d /var/lib/flatpak ]]; then
   export PATH=~/.local/bin:$PATH
 fi
 
+if [[ -d $HOME/.cargo/bin ]]; then
+  export PATH=$HOME/.cargo/bin:$PATH
+fi
+
 if [[ -d $HOME/.oh-my-zsh ]]; then 
   # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
