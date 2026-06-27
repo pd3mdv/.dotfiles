@@ -7,7 +7,7 @@ static const Block blocks[] = {
   {"wlan0:", "/usr/bin/cat /sys/class/net/wlan0/operstate      | awk '{print $1}'"     ,    5,    0},
   {"enp0s31f6:", "/usr/bin/cat /sys/class/net/enp0s31f6/operstate | awk '{print $1}'"  ,    5,    0},
 	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }'         | sed s/i//g"           ,	 30,		0},
-	{"", "date '+%b %d (%a) %I:%M%p'"                                                    ,		5,		0},
+	{"", "date '+%b %d (%a) %H:%M%p'"                                                    ,		5,		0},
 };
 
 //sets delimiter between status commands. NULL character ('\0') means no delimiter.
