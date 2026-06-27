@@ -6,6 +6,7 @@ pack.add({
   { src = "https://github.com/goolord/alpha-nvim.git",                       name = "alpha" },
   { src = "https://github.com/norcalli/nvim-colorizer.lua.git",              name = "colorizer" },
   { src = "https://github.com/folke/tokyonight.nvim.git",                    name = "tokyonight" },
+  { src = "https://github.com/ellisonleao/gruvbox.nvim",                     name = "gruvbox" },
   { src = "https://github.com/folke/trouble.nvim",                           name = "trouble" },
   { src = "https://github.com/folke/which-key.nvim",                         name = "which-key" },
   { src = "https://github.com/lewis6991/gitsigns.nvim",                      name = "gitsigns" },
@@ -27,7 +28,7 @@ pack.add({
   { src = "https://github.com/hrsh7th/cmp-nvim-lsp.git",                     name = "cmp-nvim-lsp" },
   { src = "https://github.com/hrsh7th/cmp-buffer.git",                       name = "cmp-buffer" },
   { src = "https://github.com/hrsh7th/cmp-path.git",                         name = "cmp-path" },
-  { src = "https://github.com/L3MON4D3/LuaSnip.git",                         name = "Luasnip" },
+  { src = "https://github.com/L3MON4D3/LuaSnip.git",                         name = "luasnip" },
   { src = "https://github.com/saadparwaiz1/cmp_luasnip.git",                 name = "cmp_luasnip" },
   { src = "https://github.com/rafamadriz/friendly-snippets.git",             name = "friendly-snippets" },
   { src = "https://github.com/onsails/lspkind-nvim.git",                     name = "lspkind" },
@@ -64,6 +65,7 @@ end
 -- Core Plugin Configs
 safe_require("plugins.alpha")
 --safe_require("plugins.colorizer")
+safe_require("plugins.colorscheme")
 safe_require("plugins.conform")
 safe_require("plugins.lspconfig")
 safe_require("plugins.nvim-cmp")
@@ -79,5 +81,3 @@ safe_require("plugins.harpoon")
 safe_require("plugins.mini")
 safe_require("plugins.todo-comments")
 safe_require("plugins.which-key")
-
-vim.cmd.colorscheme("tokyonight-night")
