@@ -15,6 +15,10 @@ if [[ -d $HOME/.cargo/bin ]]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
 
+if [[ -d $HOME/.cache/wal ]]; then
+  cat $HOME/.cache/wal/sequences
+fi
+
 if [[ -d $HOME/.oh-my-zsh ]]; then 
   # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
