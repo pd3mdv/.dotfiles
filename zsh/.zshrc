@@ -63,3 +63,11 @@ if [[ -d $HOME/.config/nvm ]]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+show-at-line () {
+  bat --highlight-line $(rg --hidden --line-number "${1:-.}" | fzf --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' | awk -F ':' '{print $2" "$1}')
+}
+
+open-at-line () {
+  nvim $(rg --hidden --line-number "${1:-.}" | fzf --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' | awk -F ':' '{print "+"$2" "$1}')
+}
